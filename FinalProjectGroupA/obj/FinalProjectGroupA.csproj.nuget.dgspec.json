@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\safeb\\source\\repos\\tmep\\ttetete\\FinalProjectGroupA\\FinalProjectGroupA\\FinalProjectGroupA.csproj": {}
+    "C:\\Users\\safeb\\source\\repos\\FinalProjectGroupA\\FinalProjectGroupA\\FinalProjectGroupA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\safeb\\source\\repos\\tmep\\ttetete\\FinalProjectGroupA\\FinalProjectGroupA\\FinalProjectGroupA.csproj": {
+    "C:\\Users\\safeb\\source\\repos\\FinalProjectGroupA\\FinalProjectGroupA\\FinalProjectGroupA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\safeb\\source\\repos\\tmep\\ttetete\\FinalProjectGroupA\\FinalProjectGroupA\\FinalProjectGroupA.csproj",
+        "projectUniqueName": "C:\\Users\\safeb\\source\\repos\\FinalProjectGroupA\\FinalProjectGroupA\\FinalProjectGroupA.csproj",
         "projectName": "FinalProjectGroupA",
-        "projectPath": "C:\\Users\\safeb\\source\\repos\\tmep\\ttetete\\FinalProjectGroupA\\FinalProjectGroupA\\FinalProjectGroupA.csproj",
+        "projectPath": "C:\\Users\\safeb\\source\\repos\\FinalProjectGroupA\\FinalProjectGroupA\\FinalProjectGroupA.csproj",
         "packagesPath": "C:\\Users\\safeb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\safeb\\source\\repos\\tmep\\ttetete\\FinalProjectGroupA\\FinalProjectGroupA\\obj\\",
+        "outputPath": "C:\\Users\\safeb\\source\\repos\\FinalProjectGroupA\\FinalProjectGroupA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,6 +42,22 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
