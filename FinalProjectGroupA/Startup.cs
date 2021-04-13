@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using FinalProjectGroupA.Models;
+using FinalProjectGroupA.Data;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -26,6 +29,8 @@ namespace FinalProjectGroupA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<TeamContext>(options =>
+                                               options.UseSqlServer(Configuration.GetConnectionString("TeamContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
