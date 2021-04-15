@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,11 +12,11 @@ namespace FinalProjectGroupA.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class TeamsController : ControllerBase
+    public class StadiumsController : ControllerBase
     {
-        private ILogger<TeamsController> _logger;
+        private ILogger<StadiumsController> _logger;
         private TeamContext _ctx;
-        public TeamsController(ILogger<TeamsController> logger, TeamContext ctx)
+        public StadiumsController(ILogger<StadiumsController> logger, TeamContext ctx)
         {
             _logger = logger;
             _ctx = ctx;
@@ -28,18 +28,18 @@ namespace FinalProjectGroupA.Controllers
         public IActionResult Get(int? id)
         {
             if (id== null || id < 1)
-                return Ok(_ctx.Teams.Take(5).ToList());
-            var team = _ctx.Teams.Find(id);
-            if (team == null)
+                return Ok(_ctx.Stadiums.Take(5).ToList());
+            var stadium = _ctx.Stadiums.Find(id);
+            if (stadium == null)
                 return NotFound();
             
-            return Ok(team);
+            return Ok(stadium);
         }
 
         [HttpPut]
         [ApiConventionMethod(typeof(DefaultApiConventions),
         nameof(DefaultApiConventions.Put))]
-        public IActionResult Put(Team team)
+        public IActionResult Put(Stadium stadium)
         {
             return Ok();
         }
@@ -47,7 +47,7 @@ namespace FinalProjectGroupA.Controllers
         [HttpPost]
         [ApiConventionMethod(typeof(DefaultApiConventions),
         nameof(DefaultApiConventions.Post))]
-        public IActionResult pOST(Team team)
+        public IActionResult pOST(Stadium stadium)
         {
             return Ok();
         }

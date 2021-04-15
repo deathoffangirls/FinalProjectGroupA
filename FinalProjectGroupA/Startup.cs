@@ -30,16 +30,18 @@ namespace FinalProjectGroupA
         {
             services.AddControllers();
             services.AddDbContext<TeamContext>(options =>
-                                               options.UseSqlServer(Configuration.GetConnectionString("TeamContext")));
+                options.UseSqlServer(Configuration.GetConnectionString("TeamContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, TeamContext ctx)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            ctx.Database.Migrate();
 
             app.UseHttpsRedirection();
 
