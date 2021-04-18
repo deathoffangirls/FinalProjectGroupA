@@ -11,7 +11,7 @@ using Microsoft.AspNetCore;
 namespace FinalProjectGroupA.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("hobby")]
     public class HobbiesController : ControllerBase
     {
         private ILogger<HobbiesController> _logger;

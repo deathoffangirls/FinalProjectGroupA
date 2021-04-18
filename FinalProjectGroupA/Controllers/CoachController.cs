@@ -11,7 +11,7 @@ using Microsoft.AspNetCore;
 namespace FinalProjectGroupA.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("coach")]
     public class CoachesController : ControllerBase
     {
         private ILogger<CoachesController> _logger;

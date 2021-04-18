@@ -29,6 +29,7 @@ namespace FinalProjectGroupA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwaggerDocument();
             services.AddDbContext<TeamContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("TeamContext")));
         }
@@ -48,6 +49,10 @@ namespace FinalProjectGroupA
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseOpenApi();
+          
+            app.UseSwaggerUi3();
 
             app.UseEndpoints(endpoints =>
             {

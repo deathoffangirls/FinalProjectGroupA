@@ -1,9 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\safeb\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\safeb\\.nuget\\packages",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "C:\\Users\\jorda\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jorda\\.nuget\\packages"
     ]
   }
 }
