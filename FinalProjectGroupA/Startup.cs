@@ -29,7 +29,10 @@ namespace FinalProjectGroupA
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSwaggerDocument();
+            services.AddSwaggerDocument(settings =>
+            {
+                settings.Title = "Final Project (Christopher, Henry, Lilith)";
+            });
             services.AddDbContext<TeamContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("TeamContext")));
         }
